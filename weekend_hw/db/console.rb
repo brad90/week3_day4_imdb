@@ -7,7 +7,7 @@ require( 'pry-byebug' )
 
 Film.delete_all()
 Customer.delete_all()
-# Tickets.delete_all()
+Ticket.delete_all()
 
 customer1 = Customer.new({
   'name' => 'Andrew Bradley','funds' => 200})
@@ -37,22 +37,26 @@ film3.price = 20
 film3.update
 
 
-tickets1.Ticket.new({
-  'customer_id' => 'customer1.id', 'film_id' => 'film1.id'})
+tickets1 = Ticket.new({'customer_id' => customer1.id, 'film_id' => film1.id})
 tickets1.save()
 
-
-tickets2.Ticket.new({
-  'customer_id' => 'customer1.id', 'film_id' => 'film2.id'})
+tickets2 = Ticket.new({'customer_id' => customer1.id, 'film_id' => film2.id})
 tickets2.save()
 
-tickets3.Ticket.new({
-  'customer_id' => 'customer2.id', 'film_id' => 'film3.id'})
-tickets3.save
+tickets3 = Ticket.new({'customer_id' => customer2.id, 'film_id' => film3.id})
+tickets3.save()
 
-tickets4.Ticket.new({
-  'customer_id' => 'customer3.id', 'film_id' => 'film1.id'})
-tickets4.save
+tickets4 = Ticket.new({'customer_id' => customer3.id, 'film_id' => film1.id})
+tickets4.save()
+
+tickets5 = Ticket.new({'customer_id' => customer2.id, 'film_id' => film1.id})
+tickets5.save()
+
+tickets6 = Ticket.new({'customer_id' => customer3.id, 'film_id' => film3.id})
+tickets6.save()
+
+tickets7 = Ticket.new({'customer_id' => customer3.id, 'film_id' => film2.id})
+tickets7.save()
 
 
 
