@@ -38,17 +38,17 @@ film3.save()
 film3.price = 20
 film3.update
 
-showtime1 = Showtime.new({'film_id' => film1.id, 'showtime' =>'20:00', 'max_capacity' => 50 })
+showtime1 = Showtime.new({'film_id' => film1.id, 'showtime' =>'20:00', 'max_capacity' => 2 })
 
 showtime1.save()
 
-showtime2 = Showtime.new({'film_id' => film3.id, 'showtime' =>'17:00', 'max_capacity' => 40  })
+showtime2 = Showtime.new({'film_id' => film3.id, 'showtime' =>'17:00', 'max_capacity' => 2  })
 showtime2.save()
 
-showtime3 = Showtime.new({'film_id' => film1.id, 'showtime' =>'16:00', 'max_capacity' => 50 })
+showtime3 = Showtime.new({'film_id' => film1.id, 'showtime' =>'16:00', 'max_capacity' => 2 })
 showtime3.save()
 
-showtime4 = Showtime.new({'film_id' => film2.id, 'showtime' =>'11:00', 'max_capacity' => 50 })
+showtime4 = Showtime.new({'film_id' => film2.id, 'showtime' =>'11:00', 'max_capacity' => 3 })
 showtime4.save()
 
 showtime2.showtime = '23:00'
@@ -99,6 +99,7 @@ tickets13.save()
 
 tickets14 = Ticket.new({'customer_id' => customer3.id, 'showtime_id' => showtime3.id})
 tickets13.save()
+
 
 
 
